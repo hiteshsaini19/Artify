@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
 import About from './pages/About';
-import Exhibition from './pages/Exhibition';
+import ExhibitionPage from './pages/ExhibitionPage';
 import './styles/App.css';
 
 const App = () => {
@@ -12,11 +12,11 @@ const App = () => {
     <Router>
       <div className="App">
         <Header />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/exhibition/:id" component={Exhibition} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/exhibitions/:id" element={<ExhibitionPage />} />
+        </Routes>
         <Footer />
       </div>
     </Router>
