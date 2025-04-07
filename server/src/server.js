@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
-// Start the server
+// Hello
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
