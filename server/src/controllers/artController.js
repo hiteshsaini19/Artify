@@ -10,6 +10,20 @@ exports.getAllArtworks = async (req, res) => {
     }
 };
 
+// Fetch a single artwork by ID
+exports.getArtworkById = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const artwork = await Art.findById(id);
+        if (!artwork) {
+            return res.status(404).json({ message: 'Artwork not found' });
+        }
+        res.status(200).json(artwork);
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching artwork', error });
+    }
+};
+
 // Create a new artwork
 exports.createArtwork = async (req, res) => {
     const newArtwork = new Art(req.body);
