@@ -1,0 +1,29 @@
+{
+  "name": "artify-server",
+  "version": "1.0.0",
+  "description": "Server for the Artify virtual art gallery project.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^8.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "keywords": [
+    "art",
+    "gallery",
+    "virtual",
+    "accessibility",
+    "diversity"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
